@@ -1,13 +1,9 @@
-import AnimationSection from "@/components/AnimationSection";
-import GsapAnimationTest from "@/components/GsapAnimationTest";
-import GsapScrollTriggerTest from "@/components/GsapScrollTriggerTest";
+import HomeSection from "@/components/HomeSection";
 
 export default function Home() {
   return (
     <div>
-      {/* <GsapAnimationTest /> */}
-      {/* <GsapScrollTriggerTest /> */}
-      <AnimationSection />
+      <HomeSection />
     </div>
   );
 }

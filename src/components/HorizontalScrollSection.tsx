@@ -16,7 +16,7 @@ import Image from "next/image";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, Observer);
 
-const GsapScrollTriggerTest: React.FC = ({}) => {
+const HorizontalScrollSection: React.FC = ({}) => {
   const Tools = [
     {
       name: "Next.js",
@@ -72,25 +72,25 @@ const GsapScrollTriggerTest: React.FC = ({}) => {
   );
 
   return (
-    <div className="App overflow-x-hidden" ref={containerRef}>
-      <div ref={sliderRef} className="relative">
+    <div className="overflow-x-hidden" ref={containerRef}>
+      <div ref={sliderRef} className="relative pt-14">
         <div className="grid place-items-center">
           <h1 className="text-center text-blue-500 text-4xl font-bold py-3">
-            Tools I Use
+            My Tech Stack
           </h1>
         </div>
 
-        <div className="panel-container flex flex-nowrap w-[500%] h-fit">
+        <div className="panel-container flex flex-nowrap w-[600%] sm:w-[500%] h-fit">
           {Tools.map((tool, index) => (
             <div
               key={index}
-              className="panel grid place-items-center w-full px-16 py-40"
+              className="panel grid place-items-center w-[120%] sm:w-full px-16 py-40"
             >
-              <div className="md:flex gap-x-4">
+              <div className="md:flex gap-x-4 cursor-default">
                 <Image alt="Logo" src={tool.logo} className="w-52 h-52" />
                 <div className="flex flex-col gap-y-3">
                   <h1 className="text-6xl font-bold">{tool.name}</h1>
-                  <p className="text-gray-300 text-2xl max-w-[350px]">
+                  <p className="text-gray-300 text-2xl max-w-[300px] lg:max-w-[350px]">
                     {tool.description}
                   </p>
                 </div>
@@ -103,4 +103,4 @@ const GsapScrollTriggerTest: React.FC = ({}) => {
   );
 };
 
-export default GsapScrollTriggerTest;
+export default HorizontalScrollSection;
