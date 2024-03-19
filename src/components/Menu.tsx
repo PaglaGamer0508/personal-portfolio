@@ -24,7 +24,7 @@ const Menu: React.FC = ({}) => {
     <div
       className={`${
         isOpen ? "block" : "hidden"
-      } sm:hidden fixed inset-0 z-[300] bg-black/80 backdrop-blur-md`}
+      } lg:hidden fixed inset-0 z-[300] bg-black/80 backdrop-blur-md`}
     >
       <div className="flex items-center justify-between lg:justify-start w-full p-3">
         <Link href={"#top"}>
