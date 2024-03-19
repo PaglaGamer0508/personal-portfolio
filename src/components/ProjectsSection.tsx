@@ -9,6 +9,7 @@ import WordWiseLogo from "@/../public/projects-logo/wordwise.png";
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import { useIntersectionObserver } from "usehooks-ts";
 
 interface ProjectsSectionProps {}
 
@@ -46,17 +47,29 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({}) => {
     },
   ];
 
+  const { isIntersecting, ref } = useIntersectionObserver({
+    threshold: 0.5,
+    freezeOnceVisible: true,
+  });
+
   return (
-    <div id="works" className="py-7 pt-14">
+    <div
+      ref={ref}
+      id="works"
+      className="md:min-h-screen py-7 pt-14 overflow-y-hidden"
+    >
       <h1 className="text-center text-blue-500 text-4xl font-bold py-3">
         Check Out My Works
       </h1>
 
-      <div className="flex items-center justify-center gap-x-10 gap-y-5 flex-wrap px-5 sm:px-10 py-28">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-3 lg:gap-x-8 gap-y-5 px-5 sm:px-10 py-14 md:py-28 mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="border-2 border-blue-500 rounded-xl overflow-hidden"
+            className={`${
+              isIntersecting ? "" : "translate-y-full opacity-0"
+            } flex flex-col justify-between border-2 border-blue-500 rounded-xl overflow-hidden transition-all duration-1000`}
+            style={{ transitionDelay: `${index * 100}ms` }}
           >
             <div className="flex flex-col items-center p-2">
               <Image

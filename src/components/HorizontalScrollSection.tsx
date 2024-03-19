@@ -80,17 +80,23 @@ const HorizontalScrollSection: React.FC = ({}) => {
           </h1>
         </div>
 
-        <div className="panel-container flex flex-nowrap w-[600%] sm:w-[500%] h-fit">
+        <div className="flex flex-nowrap w-[500%] h-fit">
           {Tools.map((tool, index) => (
             <div
               key={index}
-              className="panel grid place-items-center w-[120%] sm:w-full px-16 py-40"
+              className="panel grid place-items-center w-full px-16 py-24 md:py-40"
             >
-              <div className="md:flex gap-x-4 cursor-default">
-                <Image alt="Logo" src={tool.logo} className="w-52 h-52" />
+              <div className="flex flex-col items-center md:flex-row md:gap-x-4 cursor-default">
+                <Image
+                  alt="Logo"
+                  src={tool.logo}
+                  className="w-36 md:w-52 h-3w-36 md:h-52"
+                />
                 <div className="flex flex-col gap-y-3">
-                  <h1 className="text-6xl font-bold">{tool.name}</h1>
-                  <p className="text-gray-300 text-2xl max-w-[300px] lg:max-w-[350px]">
+                  <h1 className="text-center md:text-left text-4xl md:text-6xl font-bold">
+                    {tool.name}
+                  </h1>
+                  <p className="text-center md:text-left text-gray-300 text-2xl max-w-[300px] lg:max-w-[350px]">
                     {tool.description}
                   </p>
                 </div>

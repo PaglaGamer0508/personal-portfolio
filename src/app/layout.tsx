@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
+import MenuContainer from "@/components/MenuContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fahad Mahmud",
+  title: "Fahad Mahmud | Full-stack Web Developer",
   description:
-    "I am a full-stack web developer, i use next.js, react.js, typescript and many other tools to create robust web applications",
+    "I am a full-stack web developer, i use Next.js, React.js, TypeScript and many other tools to create robust web applications",
 };
 
 export default function RootLayout({
@@ -17,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <MenuContainer />
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }

@@ -11,7 +11,7 @@ import ReactLogo from "@/../public/react.svg";
 import SassLogo from "@/../public/sass.svg";
 import TailwindLogo from "@/../public/tailwind.svg";
 import TsLogo from "@/../public/typescript.svg";
-import ZodLogo from "@/../public/zod.svg";
+import PrismaLogo from "@/../public/prisma.svg";
 import MySqlLogo from "@/../public/mysql.svg";
 import PostGreSqlLogo from "@/../public/postgresql.svg";
 import MongoDbLogo from "@/../public/mongodb.svg";
@@ -22,7 +22,7 @@ import { useIntersectionObserver } from "usehooks-ts";
 
 const SkillSection: React.FC = ({}) => {
   const { isIntersecting, ref } = useIntersectionObserver({
-    threshold: 0.5,
+    threshold: 0.3,
     freezeOnceVisible: true,
   });
 
@@ -121,8 +121,8 @@ const SkillSection: React.FC = ({}) => {
                   <h1 className="text-2xl font-semibold">ReactQuery</h1>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image alt="logo" src={ZodLogo} className="w-8 h-8" />
-                  <h1 className="text-2xl font-semibold">Zod</h1>
+                  <Image alt="logo" src={PrismaLogo} className="w-8 h-8" />
+                  <h1 className="text-2xl font-semibold">Prisma</h1>
                 </div>
               </div>
             </div>
@@ -135,7 +135,7 @@ const SkillSection: React.FC = ({}) => {
             } transition-all delay-200 duration-1000 mt-3`}
           >
             <h1 className="text-blue-500 text-center text-3xl font-bold py-3 mb-3">
-              Database
+              Databases
             </h1>
 
             <div className="flex justify-center flex-wrap gap-x-7 gap-y-3 ml-5">
@@ -157,7 +157,7 @@ const SkillSection: React.FC = ({}) => {
       </div>
 
       <div className="grid place-items-center">
-        <h1 className="bg-white/15 text-lg font-semibold px-3 py-1 rounded-full cursor-default">
+        <h1 className="bg-slate-300/15 text-lg font-semibold px-3 py-1 rounded-full cursor-default">
           And Many Others...
         </h1>
       </div>
