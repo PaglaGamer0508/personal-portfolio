@@ -184,25 +184,14 @@ const HomeSection: React.FC = ({}) => {
                 <span className="relative z-10">Contact Me</span>
               </Link>
               {/* Download CV */}
-              {/* <Link
+              <Link
                 download
                 target="_blank"
-                href={`./resume-demo.pdf`}
+                href={`./cv.pdf`}
                 className="relative flex h-[50px] w-full items-center justify-center overflow-hidden bg-gray-800 text-white text-xl shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-500 before:duration-500 before:ease-out hover:before:h-56 hover:shadow-blue-500 hover:before:w-56 rounded-full active:scale-95 mt-3"
               >
                 <span className="relative z-10">Download CV</span>
-              </Link> */}
-
-              {/* Disabled Button */}
-              <button
-                title="Not Available"
-                aria-label="Not Available"
-                aria-disabled="true"
-                className="bg-gray-300 text-black text-xl py-2 px-3 rounded-full cursor-not-allowed opacity-50 mt-3"
-                disabled
-              >
-                Download CV
-              </button>
+              </Link>
             </div>
           </div>
         </div>
