@@ -187,7 +187,7 @@ const HomeSection: React.FC = ({}) => {
               <Link
                 download
                 target="_blank"
-                href={`./cv.pdf`}
+                href={`./fahad-cv.pdf`}
                 className="relative flex h-[50px] w-full items-center justify-center overflow-hidden bg-gray-800 text-white text-xl shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-500 before:duration-500 before:ease-out hover:before:h-56 hover:shadow-blue-500 hover:before:w-56 rounded-full active:scale-95 mt-3"
               >
                 <span className="relative z-10">Download CV</span>
