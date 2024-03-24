@@ -90,7 +90,7 @@ const HorizontalScrollSection: React.FC = ({}) => {
                 <Image
                   alt="Logo"
                   src={tool.logo}
-                  className="w-36 md:w-52 h-3w-36 md:h-52"
+                  className="w-36 md:w-52 h-36 md:h-52"
                 />
                 <div className="flex flex-col gap-y-3">
                   <h1 className="text-center md:text-left text-4xl md:text-6xl font-bold">

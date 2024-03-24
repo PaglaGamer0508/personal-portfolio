@@ -33,7 +33,7 @@ const SkillSection: React.FC = ({}) => {
       </h1>
 
       <div className="p-10 cursor-default">
-        <div className="w-[95%] md:w-[80%] lg:w-[60%] mx-auto">
+        <div className="flex flex-col w-[95%] md:w-[80%] lg:w-[60%] mx-auto">
           {/* first Section */}
           <div
             className={`${
@@ -134,11 +134,11 @@ const SkillSection: React.FC = ({}) => {
               isIntersecting ? "" : "-translate-x-full opacity-0"
             } transition-all delay-200 duration-1000 mt-3`}
           >
-            <h1 className="text-blue-500 text-center text-3xl font-bold py-3 mb-3">
+            <h1 className="text-blue-500 sm:text-center text-3xl font-bold py-3 mb-3">
               Databases
             </h1>
 
-            <div className="flex justify-center flex-wrap gap-x-7 gap-y-3 ml-5">
+            <div className="sm:flex sm:justify-center sm:gap-x-7 sm:gap-y-3 space-y-3 sm:space-y-0 ml-5">
               <div className="flex items-center gap-2">
                 <Image alt="logo" src={MySqlLogo} className="w-8 h-8" />
                 <h1 className="text-2xl font-semibold">MySQL</h1>
