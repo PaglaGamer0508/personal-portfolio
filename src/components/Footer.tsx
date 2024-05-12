@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
               onMouseEnter={() => setIsFiverrIconHover(true)}
               onMouseLeave={() => setIsFiverrIconHover(false)}
               target="_blank"
-              href={"https://www.fiverr.com/fahadmahmud_dev"}
+              href={"https://www.fiverr.com/fahad_m_dev"}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
